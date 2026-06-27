@@ -1,8 +1,6 @@
 # **[Qwen-Image-Edit-2509-LoRAs-Fast-Lazy-Load](https://huggingface.co/spaces/prithivMLmods/Qwen-Image-Edit-2509-LoRAs-Fast)**
 
-> A Gradio-based demonstration for the Qwen/Qwen-Image-Edit-2509 model, featuring lazy-loaded LoRA adapters for fast, specialized image edits like photo-to-anime conversion, angle changes, lighting restoration, skin editing, and upscaling. Supports single-image inputs with descriptive prompts; adapters load on-demand to optimize memory. Enhanced with Flash Attention 3 for efficient inference.
-
-<img width="1733" height="1498" alt="image" src="https://github.com/user-attachments/assets/8f56b028-a368-4807-bb5f-5aedbbd035c3" />
+A Gradio-based demonstration for the Qwen/Qwen-Image-Edit-2509 model, featuring lazy-loaded LoRA adapters for fast, specialized image edits like photo-to-anime conversion, angle changes, lighting restoration, skin editing, and upscaling. Supports single-image inputs with descriptive prompts; adapters load on-demand to optimize memory. Enhanced with Flash Attention 3 for efficient inference.
 
 ## Features
 
@@ -13,6 +11,8 @@
 - **Custom Theme**: OrangeRedTheme with gradients and responsive CSS for a clean UI.
 - **Examples**: 15 pre-loaded inputs for quick testing (e.g., multi-angle views, next-scene transitions).
 - **Queueing Support**: Up to 30 concurrent jobs with 300s cache for smooth usage.
+
+<img width="1733" height="1498" alt="image" src="https://github.com/user-attachments/assets/8f56b028-a368-4807-bb5f-5aedbbd035c3" />
 
 ## Prerequisites
 
@@ -46,7 +46,7 @@
    supervision
    kernels
    spaces
-   gradio
+   gradio==6.17.3
    hf_xet
    torch==2.11.0
    numpy
@@ -63,29 +63,27 @@
 
 ### **Running with uv (Recommended)**
 
-[`uv`](https://github.com/astral-sh/uv) is a fast Python package manager that provides fully reproducible installs via a lock file.
+`uv` is an ultra-fast Python package installer and dependency resolver. It isolates execution contexts instantly and securely.
 
-**Step 1 — Install uv**
-```bash
-curl -Ls https://astral.sh/uv/install.sh | sh
-```
+**1. Install `uv`**
 
-**Step 2 — Clone the repository**
+* **Linux / macOS:** `curl -LsSf https://astral.sh/uv/install.sh | sh`
+* **Windows (PowerShell):** `powershell -c "irm https://astral.sh/uv/install.ps1 | iex"`
+
+**2. Clone and Synchronize the Workspace**
+
 ```bash
 git clone https://github.com/PRITHIVSAKTHIUR/Qwen-Image-Edit-2509-LoRAs-Fast-Lazy-Load.git
 cd Qwen-Image-Edit-2509-LoRAs-Fast-Lazy-Load
+uv sync
+
 ```
 
-**Step 3 — Initialize the project and install dependencies**
-```bash
-uv init
-uv add -r requirements.txt
-```
-This resolves all packages and generates a `uv.lock` file for reproducible installs.
+**3. Launch the Web Interface**
 
-**Step 4 — Run the script**
 ```bash
-uv run python app.py
+uv run app.py
+
 ```
 
 ---
@@ -157,4 +155,4 @@ Repository: [https://github.com/PRITHIVSAKTHIUR/Qwen-Image-Edit-2509-LoRAs-Fast-
 
 Apache License 2.0. See [LICENSE](LICENSE) for details.
 
-Built by Prithiv Sakthi. Report issues via the repository.
+Built by [Prithiv Sakthi](https://github.com/PRITHIVSAKTHIUR). Report issues via the [repository](https://github.com/PRITHIVSAKTHIUR/Qwen-Image-Edit-2509-LoRAs-Fast-Lazy-Load/issues).
