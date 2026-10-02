@@ -3,27 +3,27 @@ name = "qwen-image-edit-2509-loras-fast"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.12"
+authors = [
+    { name = 'PRITHIVMLMODS\prith', email = "prithivsakthi676@gmail.com" }
+]
+requires-python = ">=3.14"
 dependencies = [
-    "accelerate",
-    "av>=17.1.0",
-    "diffusers",
-    "gradio==6.17.3",
-    "hf-xet>=1.5.0",
-    "huggingface-hub>=0.36.2",
-    "kernels>=0.12.3",
-    "numpy>=2.4.6",
-    "peft",
-    "sentencepiece>=0.2.1",
-    "spaces>=0.50.4",
-    "supervision>=0.28.0",
+    "accelerate==1.14.0",
+    "av==17.1.0",
+    "diffusers==0.39.0",
+    "gradio==6.22.0",
+    "huggingface-hub==1.24.0",
+    "kernels==0.16.0",
+    "peft==0.19.1",
+    "spaces==0.51.1",
     "torch==2.11.0",
-    "torchvision>=0.26.0",
-    "transformers",
+    "torchvision==0.26.0",
+    "transformers==5.14.1",
 ]
 
-[tool.uv.sources]
-transformers = { git = "https://github.com/huggingface/transformers.git", rev = "v4.57.3" }
-accelerate = { git = "https://github.com/huggingface/accelerate.git" }
-diffusers = { git = "https://github.com/huggingface/diffusers.git" }
-peft = { git = "https://github.com/huggingface/peft.git" }
+[project.scripts]
+qwen-image-edit-2509-loras-fast = "qwen_image_edit_2509_loras_fast:main"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
